@@ -1,8 +1,6 @@
 function renderbadge(data) {
   const dsiredLicenseForProj = data.license;
-
   let badge = "";
-
   if (dsiredLicenseForProj === 'None') {
     return badge;
   }
@@ -22,16 +20,34 @@ function renderbadge(data) {
   }
 };
 
-
-
-function renderLicenseLink(data) {}
-
-
-function renderLicenseSection(data) {}
+function renderLicenseSection(data) {
+  const dsiredLicenseForProj = data.license;
+  if(dsiredLicenseForProj === 'None') {
+    return "";
+  } else {
+    return `# License
+    ${renderLicenseBadge(data)}`;
+  }
+};
+ 
+function renderLicenseTableOfContents(data) {
+   const dsiredLicenseForProj = data.license;
+   if(dsiredLicenseForProj === 'None') {
+     return "";
+   } else {
+     return "* [License](#license)";
+   }
+};
+ 
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
+# Table of Contents
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+${renderLicenseTableOfContents(data)}
 # Description
 ${data.description}
 # Installation
@@ -40,7 +56,8 @@ ${data.installation}
 ${data.usage}
 # License
 ${renderbadge(data)}
+
 `;
-}
+};
 
 module.exports = generateMarkdown;

@@ -12,17 +12,23 @@ const questions = [{
 {
     type: "input",
     name: "description",
-    message: "Give a detailed description on your project"
+    message: "Give a detailed description on your project?"
 },
 {
     type: "input",
     name: "installation",
-    message: "What dependancies did you install for this project"
+    message: "What dependancies did you install for this project?"
 },
 {
     type: "input",
     name: "usage",
-    message: "What are the steps to get this project running"
+    message: "What are the steps to get this project running?"
+},
+{
+    type: "list",
+    name: "license",
+    message: "which license does your project use?",
+    choices: ["None", "MIT", "Apache", "Boost"]
 }];
 
 // TODO: Create a function to write README file

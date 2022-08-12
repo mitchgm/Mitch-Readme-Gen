@@ -1,4 +1,4 @@
-function renderbadge(data) {
+function renderLicenseBadge(data) {
   const dsiredLicenseForProj = data.license;
   let badge = "";
   if (dsiredLicenseForProj === 'None') {
@@ -26,7 +26,7 @@ function renderLicenseSection(data) {
     return "";
   } else {
     return `# License
-    ${renderLicenseBadge(data)}`;
+${renderLicenseBadge(data)}`;
   }
 };
  
@@ -43,20 +43,28 @@ function renderLicenseTableOfContents(data) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
+## https://github.com/${data.github}/${data.title}
 # Table of Contents
 * [Description](#description)
 * [Installation](#installation)
 * [Usage](#usage)
 ${renderLicenseTableOfContents(data)}
+* [Contributing](#contributions)
+* [Tests](#test)
+* [Questions](#questions)
 # Description
 ${data.description}
 # Installation
 ${data.installation}
 # Usage
-${data.usage}
-# License
-${renderbadge(data)}
-
+In order to use this app ${data.usage}
+${renderLicenseSection(data)}
+# Contributions
+Contribtions ${data.contribution}
+# Tests
+${data.test}
+# Questions
+If you have any questions about tge repository contact ${data.contribution} at: ${data.email}
 `;
 };
 

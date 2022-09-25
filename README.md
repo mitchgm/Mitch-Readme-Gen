@@ -1,4 +1,5 @@
-# Mitch's ReadMe Gen
+# Mitchs ReadMe Gen
+## https://github.com/mitchgm/Mitchs ReadMe Gen
 # Table of Contents
 * [Description](#description)
 * [Installation](#installation)
@@ -8,16 +9,19 @@
 * [Tests](#test)
 * [Questions](#questions)
 # Description
-s
+A codebase that enables prompts to create a readme!
 # Installation
-s
+javascript
 # Usage
-In order to use this app s
+In order to use this app wireframing, coding, testing
 # License
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 # Contributions
-Contribtions s
+Contribtions Mitch
 # Tests
-s
+Self Tested
 # Questions
-If you have any questions about tge repository contact s at: s
+If you have any questions about the repository contact Mitch at: mitchgm@bgsu.edu
+
+# Link to video
+https://drive.google.com/file/d/1RF0WRGeBcZtxggRKSDj6HhM6DGoPFs1X/view 
